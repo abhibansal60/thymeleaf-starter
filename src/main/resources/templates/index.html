@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thymeleaf Sample</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to Thymeleaf Sample with Webpack</h1>
+</header>
+
+<main>
+    <section>
+        <h2 th:text="${pageTitle}">Default Page Title</h2>
+        <p th:text="${message}">This is a sample message.</p>
+    </section>
+    <section>
+        <h3>Items List</h3>
+        <ul th:each="item : ${features}">
+            <li th:text="${item}"></li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 Thymeleaf Example</p>
+</footer>
+</body>
+</html>
